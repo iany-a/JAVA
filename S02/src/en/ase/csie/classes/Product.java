@@ -85,7 +85,4 @@ public class Product {
         clone.quantity = this.quantity;
         return clone;
     }
-
-
-
 }
