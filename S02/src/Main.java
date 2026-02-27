@@ -29,6 +29,12 @@ public class Main {
             System.out.println(i);
         }
 
+        Product p3 = new Product ("P3", "Type", new int[]{2,4,5}, 7);
+        p3.print();
+        Product p4 = p3.clone2();
+        p4.setQuantity(34);
+        p4.print();
+
 
 
     }

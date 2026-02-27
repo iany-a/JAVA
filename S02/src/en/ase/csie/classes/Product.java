@@ -69,12 +69,12 @@ public class Product {
     }
 
     @Override //annotation
-    public Product clone() {
+    public Product clone() { //less code to write, using setters and getters
         return new Product(this.name, this.productType, this.getPriceHistory(), this.quantity);
 
     }
 
-    public Product clone2(){ //2nd way of cloning
+    public Product clone2(){ //2nd way of cloning, to omit using setters and getters
         Product clone = new Product("N/A", "N/A", null, 0);
         clone.name = this.name;
         clone.productType = this.productType;
