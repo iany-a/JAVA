@@ -1,7 +1,9 @@
+package ro.ase.csie;
+
 import java.util.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
         int[] array1 = new int[]{20, 40, 30, 50, 10, 29, 35, 60};
         Book book1 = new Book("Book1", "Author1", 300, array1);
 
@@ -43,7 +45,16 @@ public class Main {
         }
 
         //for trees we need Comparable, for hashes we need equals and hashcode
+        Book b3 = (Book) b2.clone();
 
+
+        //by defaul the map checks key uniqueness by looking at object adresses
+        map.put(b3, "John");
+        map.put(b3, "Johny");
+        for(Book b: map.keySet()){
+            System.out.println(b);
+            System.out.println(map.get(b));
+        }
 
     }
 }
