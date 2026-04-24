@@ -2,10 +2,7 @@ package en.ase.csie;
 
 import java.util.Random;
 
-public class MyThread extends Thread {
-
-    //run will be the method where we define what happens on this new thread
-    //do not make variables static, as this will mangle the multi threading
+public class MyRunnable implements Runnable{
 
     public static int a;
     public static int b;
@@ -13,7 +10,6 @@ public class MyThread extends Thread {
 
     @Override
     public void run() {
-        super.run();
         for(int i=0; i<5; i++) {
             add();
         }
@@ -31,6 +27,4 @@ public class MyThread extends Thread {
             System.out.println("a = " + a + ", b = " + b);
         }
     }
-
-
 }
