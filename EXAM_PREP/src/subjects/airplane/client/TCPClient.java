@@ -18,16 +18,12 @@ public class TCPClient {
     }
 
     public void sendFile(String filePath){
-        try (FileInputStream fileIn = new FileInputStream(filePath);
+        try (BufferedInputStream fileIn = new BufferedInputStream(new FileInputStream(filePath));
              Socket socket = new Socket(this.hostname, this.port);
-             OutputStream out = socket.getOutputStream()) {
+             BufferedOutputStream out = new BufferedOutputStream(socket.getOutputStream())) {
             System.out.println("Connected to server using port " + port);
-            byte[] buffer = new byte[8192];
-            int bytesRead;
 
-            while((bytesRead = fileIn.read(buffer))!=-1){
-                out.write(buffer,0,bytesRead);
-            }
+            fileIn.transferTo(out);
             out.flush();
             System.out.println("File sent to server.");
 

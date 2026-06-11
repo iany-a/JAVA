@@ -7,6 +7,7 @@ public class ExpenseManager implements Serializable {
     private float maintenance;
     private float insurance;
     private float flightCrewCost;
+    //private float distance;
 
 
     public ExpenseManager(float kerosene, float maintenance, float insurance, float flightCrewCost) {
@@ -14,7 +15,20 @@ public class ExpenseManager implements Serializable {
         this.maintenance = maintenance;
         this.insurance = insurance;
         this.flightCrewCost = flightCrewCost;
+        //this.distance = distance;
     }
+
+    public float getTotalExpenses(){
+        return this.kerosene + this.maintenance + this.insurance + this.flightCrewCost;
+    }
+//
+//    public float getDistance() {
+//        return distance;
+//    }
+//
+//    public void setDistance(float distance) {
+//        this.distance = distance;
+//    }
 
     public float getKerosene() {
         return kerosene;
