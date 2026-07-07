@@ -1,0 +1,18 @@
+5p
+clone and equals
+arrays 
+interfaces: abstract classes, anonymous clasess and objects
+input / output streams (read files and write files)
+serialization and deserialization for classes
+try / catch mechanisms
+generics - template equivalent of java
+java collection framework - list, map, set
+threads - callable with executor service
+tcp / udp
+
+extra:
+lambda expressions
+jdbc
+reactive streams
+virtual threads
+java fx
