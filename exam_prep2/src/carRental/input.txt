@@ -1,0 +1,4 @@
+M01;Dacia;Duster;SUV;45;300;Bucharest
+M02;VW;Golf;COMPACT;40;250;Cluj
+M03;Toyota;Corolla;SEDAN;50;250;Brasov
+M04;BMW;X5;SUV;120;200;Timisoara
